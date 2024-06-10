@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto greenSE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+  <title>Estufa Indoor Instrumentada</title>
+  <style> padding:0; margin:0;</style>
+  <style>
+    header{background-color: rgb(171, 246, 213); padding: 40px;text-align: center; }
+    header li {display: inline-block; margin: 0 50px;}
+    header a {text-decoration: none; color: black; font-size: 36px;}
+    header a:hover { color: rgb(205, 199, 199)}
+  </style>
+  <style>
+    body {background-color: rgb(171, 246, 213); min-height: 100vh;  }
+  </style>
+
+
+
+</head>
+
+<body>
+
+<header>
+  <div>
+
+   <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Imagem 1">
+    <hr style="border: 1px solid #000;">
+
+    <nav>
+      <ul>
+        <li><a href="http://189.61.77.37:5000/">HOME</a></li>
+        <li><a href="/config">CONFIG</a></li>
+        <li><a href="#">CONTATO</a></li>
+      </ul>
+    </nav>
+
+    <form action="/config" method="post">
+      <label for="texto">Digite os parâmetos no formato: 'out 30 50 12' :</label>
+      <input type="text" name="texto" id="texto">
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+  <hr style="border: 1px solid #000;">
+</header>
+
+
+<div class="imagem-container">
+
+   <img src="{{ url_for('static', filename='/pics/plot.png') }}" alt="Imagem 1">
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
