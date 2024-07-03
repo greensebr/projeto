@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+
+    <style>
+        body {
+            background-color: rgb(171, 246, 213);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(171, 246, 213);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>GreenSe</h1>
+        <!-- adicionar uma header geral para todas as páginas -->
+    </header>
+
+    <h1>Data Entry Form</h1>
+    <form method="post">
+        <label for="especie">Espécie:</label><br>
+        <input type="text" id="especie" name="especie" required><br><br>
+        
+        <label for="data">Data:</label><br>
+        <input type="date" id="data" name="data" required><br><br>
+
+        <label for="Hora">Hora:</label><br>
+        <input type="time" id="hora" name="hora" required><br><br>
+        
+        <!-- Adicione mais campos conforme necessário -->
+
+        <input type="hidden" name="username" value="admin"> <!-- Simulação de controle de acesso -->
+        <input type="hidden" name="password" value="admin"> <!-- Simulação de controle de acesso -->
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    <a href="/home">Voltar</a>
+</body>
+</html>
